@@ -29,6 +29,107 @@
             color: #fff;
         }
 
+        #welcomer {
+            background-image: url('images/slider_background.png');
+            height: 800px;
+            padding: 100px 10%;
+        }
+
+        .nav__thumbnail {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            width: 140px;
+            height: 62px;
+            border: 2px solid #c1c1c1;
+            cursor: pointer;
+        }
+
+        .nav__thumbnail img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .arrow {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            width: 33px;
+            height: 62px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .categories {
+            /* width: 33.3%; */
+            height: 76px;
+            margin: 40px;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25.2px;
+            transition: all ease .3s;
+        }
+
+        .categories:hover {
+            transform: translateY(-5px);
+            transition: all ease .3s;
+        }
+
+        .newest {
+            background-image: url('https://cdn.do-re.com.tr/Library/Template/Content/images/icons/icon_home-yeni-urunler.svg');
+        }
+
+        .discount {
+            background-image: url('https://cdn.do-re.com.tr/Library/Template/Content/images/icons/icon_home-indirimli-urunler.svg');
+        }
+
+        .outlet {
+            background-image: url('https://cdn.do-re.com.tr/Library/Template/Content/images/icons/icon_home-outlet.svg');
+        }
+
+        .section__title {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .product {
+            width: 303px;
+            height: 490px;
+            border: 1px solid #F7F7F7;
+            transition: all ease .3s;
+        }
+
+        .product:hover {
+            transition: all ease .3s;
+            .add_to_cart {
+                display: block;
+                transition: all ease .3s;
+            }
+        }
+
+        .add_to_cart {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 800;
+            line-height: 16.8px;
+            font-size: 14px;
+            color: #fff;
+            display: none;
+            transition: all ease .3s;
+        }
+
     </style>
 </head>
 <body>
@@ -107,7 +208,188 @@
 
     </header>
 
-    <main></main>
+    <main>
+        <div id="welcomer">
+
+            <div class="flex">
+                <div id="welcomer__left" class="mr-3">
+                    <div id="slider">
+                        <img src="images/slider/slider2.jpg" alt="">
+                    </div>
+                    <div id="slider__nav" class="flex gap-4 mt-5">
+                        <div class="arrow rounded">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+
+                        <div class="nav__thumbnail">
+                            <img src="images/slider_nav/thumbnail1.jpg" alt="">
+                        </div>
+
+                        <div class="nav__thumbnail">
+                            <img src="images/slider_nav/thumbnail2.jpg" alt="">
+                        </div>
+
+                        <div class="nav__thumbnail">
+                            <img src="images/slider_nav/thumbnail3.jpg" alt="">
+                        </div>
+
+                        <div class="nav__thumbnail">
+                            <img src="images/slider_nav/thumbnail4.jpg" alt="">
+                        </div>
+
+                        <div class="nav__thumbnail">
+                            <img src="images/slider_nav/thumbnail5.jpg" alt="">
+                        </div>
+
+                        <div class="arrow rounded">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="welcomer__right" class="cursor-pointer">
+                    <img src="images/welcomer__right.jpg" class="h-[450px] rounded w-[290px]" alt="">
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <img src="images/dijitalpiyano.jpg" alt="">
+            </div>
+
+            <div class="flex">
+                <div class="flex-1 shadow-2xl inset-shadow-sm categories newest">
+                    <h1>Yeni Eklenen Ürünler</h1>
+                </div>
+                <div class="flex-1 shadow-2xl inset-shadow-sm categories discount">
+                    <h1>İndirimli Ürünler</h1>
+                </div>
+                <div class="flex-1 shadow-2xl inset-shadow-sm categories outlet">
+                    <h1>Outlet Ürünler</h1>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div id="choosen_for_you" class="mt-10">
+            <h1 class="section__title text-center mt-14">Sizin İçin Seçtiklerimiz</h1>
+
+
+            <!-- 273 x 490 -->
+
+            <div class="products flex px-[10%]">
+                <div class="product m-5 p-8">
+
+                    <h1 class="text-xs text-center">Yamaha C40 Klasik Gitar (Natural)</h1>
+
+                    <img class="my-3" src="https://cdn.do-re.com.tr/yamaha-c40-klasik-gitar-natural-23b60ccf40f89fc11bf8f20e198c59ba-ebbe3ff57b8a28bc62933319c6375809-large-pp.jpg" alt="">
+
+                    <div class="discounted__price text-[#FB701D] text-center">
+                        <p class="font-normal text-sm my-1">Sepette</p>
+                        <p class="font-bold mt-1">9,538.98 TL</p>
+                    </div>
+
+                    <div class="normal__price text-center mt-1 text-[#838383]">
+                        <p>9,834.00 TL</p>
+                    </div>
+
+                    <div class="undiscounted__price text-center text-[#838383]">
+                        <p class="font-thin text-xs line-through mt-1">14,751.00 TL</p>
+                    </div>
+
+                    <div class="flex justify-center mt-2">
+                        <button class="add_to_cart cursor-pointer w-[300px] h-[40px] text-center bg-[#E47634] uppercase">
+                            Sepete Ekle
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="product m-5 p-8">
+
+                    <h1 class="text-xs text-center">Yamaha C40 Klasik Gitar (Natural)</h1>
+
+                    <img class="my-3" src="https://cdn.do-re.com.tr/yamaha-c40-klasik-gitar-natural-23b60ccf40f89fc11bf8f20e198c59ba-ebbe3ff57b8a28bc62933319c6375809-large-pp.jpg" alt="">
+
+                    <div class="discounted__price text-[#FB701D] text-center">
+                        <p class="font-normal text-sm my-1">Sepette</p>
+                        <p class="font-bold mt-1">9,538.98 TL</p>
+                    </div>
+
+                    <div class="normal__price text-center mt-1 text-[#838383]">
+                        <p>9,834.00 TL</p>
+                    </div>
+
+                    <div class="undiscounted__price text-center text-[#838383]">
+                        <p class="font-thin text-xs line-through mt-1">14,751.00 TL</p>
+                    </div>
+
+                    <div class="flex justify-center mt-2">
+                        <button class="add_to_cart cursor-pointer w-[300px] h-[40px] text-center bg-[#E47634] uppercase">
+                            Sepete Ekle
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="product m-5 p-8">
+
+                    <h1 class="text-xs text-center">Yamaha C40 Klasik Gitar (Natural)</h1>
+
+                    <img class="my-3" src="https://cdn.do-re.com.tr/yamaha-c40-klasik-gitar-natural-23b60ccf40f89fc11bf8f20e198c59ba-ebbe3ff57b8a28bc62933319c6375809-large-pp.jpg" alt="">
+
+                    <div class="discounted__price text-[#FB701D] text-center">
+                        <p class="font-normal text-sm my-1">Sepette</p>
+                        <p class="font-bold mt-1">9,538.98 TL</p>
+                    </div>
+
+                    <div class="normal__price text-center mt-1 text-[#838383]">
+                        <p>9,834.00 TL</p>
+                    </div>
+
+                    <div class="undiscounted__price text-center text-[#838383]">
+                        <p class="font-thin text-xs line-through mt-1">14,751.00 TL</p>
+                    </div>
+
+                    <div class="flex justify-center mt-2">
+                        <button class="add_to_cart cursor-pointer w-[300px] h-[40px] text-center bg-[#E47634] uppercase">
+                            Sepete Ekle
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="product m-5 p-8">
+
+                    <h1 class="text-xs text-center">Yamaha C40 Klasik Gitar (Natural)</h1>
+
+                    <img class="my-3" src="https://cdn.do-re.com.tr/yamaha-c40-klasik-gitar-natural-23b60ccf40f89fc11bf8f20e198c59ba-ebbe3ff57b8a28bc62933319c6375809-large-pp.jpg" alt="">
+
+                    <div class="discounted__price text-[#FB701D] text-center">
+                        <p class="font-normal text-sm my-1">Sepette</p>
+                        <p class="font-bold mt-1">9,538.98 TL</p>
+                    </div>
+
+                    <div class="normal__price text-center mt-1 text-[#838383]">
+                        <p>9,834.00 TL</p>
+                    </div>
+
+                    <div class="undiscounted__price text-center text-[#838383]">
+                        <p class="font-thin text-xs line-through mt-1">14,751.00 TL</p>
+                    </div>
+
+                    <div class="flex justify-center mt-2">
+                        <button class="add_to_cart cursor-pointer w-[300px] h-[40px] text-center bg-[#E47634] uppercase">
+                            Sepete Ekle
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
 
     <footer></footer>
 
